@@ -1,0 +1,14 @@
+const Input = [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5];
+
+const findZeroSum = (data) => {
+  for (let i = 0; i < data.length; i++) {
+    for (let j = i + 1; j < data.length; j++) {
+      if (data[i] + data[j] === 0) {
+        return [data[i], data[j]];
+      }
+    }
+  }
+  return null; // if no pair found
+};
+
+console.log(findZeroSum(Input));  // Output: [-5, 5]
